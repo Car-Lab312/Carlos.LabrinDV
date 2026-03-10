@@ -1,0 +1,250 @@
+<!-- CURSOR -->
+<div class="cursor" #cursor></div>
+<div class="cursor-trail" #cursorTrail></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" #scrollProgress></div>
+
+<!-- ═══════════════════ NAV ═══════════════════ -->
+<nav [class.scrolled]="isScrolled">
+  <div class="nav-logo">
+    <span class="logo-bracket">&lt;</span>CARLOS<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a (click)="scrollTo('hero')">Inicio</a></li>
+    <li><a (click)="scrollTo('about')">Sobre mí</a></li>
+    <li><a (click)="scrollTo('projects')">Proyectos</a></li>
+    <li><a (click)="scrollTo('experience')">Experiencia</a></li>
+    <li><a (click)="scrollTo('contact')">Contacto</a></li>
+  </ul>
+
+  <div class="nav-status">
+    <div class="status-dot"></div>
+    <span>Open to work</span>
+  </div>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section id="hero">
+  <div class="hero-blob hero-blob--1"></div>
+  <div class="hero-blob hero-blob--2"></div>
+  <div class="hero-blob hero-blob--3"></div>
+
+  <!-- Floating UI decorations -->
+  <div class="hero-ui-card hero-ui-card--palette" aria-hidden="true">
+    <div class="palette-label">color palette</div>
+    <div class="palette-swatches">
+      <span class="swatch" style="background:#ff6b6b"></span>
+      <span class="swatch" style="background:#ffd166"></span>
+      <span class="swatch" style="background:#06d6a0"></span>
+      <span class="swatch" style="background:#118ab2"></span>
+      <span class="swatch" style="background:#9b5de5"></span>
+    </div>
+  </div>
+
+  <div class="hero-ui-card hero-ui-card--perf" aria-hidden="true">
+    <div class="perf-label">Lighthouse</div>
+    <div class="perf-score">
+      <span class="perf-num">98</span>
+      <span class="perf-badge">Performance</span>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="tag-icon">✦</span>
+      Frontend Developer
+      <span class="tag-icon">✦</span>
+    </div>
+
+    <h1 class="hero-name">
+      Carlos<br>
+      <span class="hero-name__outline">Labrin</span>
+    </h1>
+
+    <p class="hero-sub">
+      Construyo interfaces que los usuarios <em>aman</em>.<br>
+      Obsesionado con la experiencia, el rendimiento y cada píxel.
+    </p>
+
+    <!-- CSS snippet card -->
+    <div class="hero-snippet">
+      <div class="snippet__bar">
+        <span class="t-dot t-dot--red"></span>
+        <span class="t-dot t-dot--yellow"></span>
+        <span class="t-dot t-dot--green"></span>
+        <span class="snippet__title">styles.scss</span>
+      </div>
+      <div class="snippet__body">
+        <div class="s-line"><span class="s-sel">.hero</span> &#123;</div>
+        <div class="s-line s-indent">
+          <span class="s-prop">display</span>: <span class="s-val">grid</span>;
+        </div>
+        <div class="s-line s-indent">
+          <span class="s-prop">place-items</span>: <span class="s-val">center</span>;
+        </div>
+        <div class="s-line s-indent">
+          <span class="s-prop">animation</span>: <span class="s-fn">fadeUp</span>
+          <span class="s-num">0.6s</span> <span class="s-val">ease</span>;
+        </div>
+        <div class="s-line s-indent">
+          <span class="s-prop">border-radius</span>: <span class="s-num">16px</span>;
+        </div>
+        <div class="s-line">&#125; <span class="s-cursor"></span></div>
+      </div>
+    </div>
+
+    <div class="hero-cta">
+      <button class="btn btn--primary" (click)="scrollTo('projects')">Ver proyectos</button>
+      <button class="btn btn--ghost" (click)="scrollTo('contact')">Contactar</button>
+    </div>
+  </div>
+
+  <div class="hero-counters">
+    <div class="counter" *ngFor="let c of counters">
+      <span class="counter__num">{{ c.current }}{{ c.suffix }}</span>
+      <span class="counter__label">{{ c.label }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ABOUT ═══════════════════ -->
+<section id="about">
+  <div class="about-content">
+    <p class="section-label">01. Sobre mí</p>
+    <h2 class="section-title">Interfaces que<br><em>se sienten</em> bien.</h2>
+
+    <p class="about-text">
+      Soy desarrollador frontend especializado en crear experiencias digitales
+      visualmente impactantes. Me apasiona transformar diseños en código limpio,
+      animado y accesible.
+    </p>
+    <p class="about-text">
+      Trabajo codo a codo con diseñadores para que cada píxel sea intencional.
+      Creo interfaces rápidas, bonitas y para todos.
+    </p>
+
+    <div class="skills-grid">
+      <div class="skill-chip" *ngFor="let s of skills">
+        <span class="skill-chip__icon">{{ s.icon }}</span>
+        <span class="skill-chip__name">{{ s.name }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-visual">
+    <!-- Browser mockup -->
+    <div class="ui-mockup">
+      <div class="ui-mockup__topbar">
+        <div class="topbar-dots"><span></span><span></span><span></span></div>
+        <div class="topbar-url">localhost:4200</div>
+      </div>
+      <div class="ui-mockup__screen">
+        <div class="mock-nav"></div>
+        <div class="mock-hero">
+          <div class="mock-h1"></div>
+          <div class="mock-h2"></div>
+          <div class="mock-btns">
+            <div class="mock-btn mock-btn--filled"></div>
+            <div class="mock-btn"></div>
+          </div>
+        </div>
+        <div class="mock-cards">
+          <div class="mock-card"></div>
+          <div class="mock-card"></div>
+          <div class="mock-card"></div>
+        </div>
+        <div class="mock-live">live preview ●</div>
+      </div>
+    </div>
+
+    <!-- Floating badges -->
+    <div class="about-badge about-badge--figma">🎨 Figma → Code</div>
+    <div class="about-badge about-badge--a11y">♿ WCAG 2.2 AA</div>
+    <div class="about-badge about-badge--perf">⚡ 60fps siempre</div>
+  </div>
+</section>
+
+<!-- ═══════════════════ PROJECTS ═══════════════════ -->
+<section id="projects">
+  <div class="projects-header">
+    <div>
+      <p class="section-label">02. Proyectos</p>
+      <h2 class="section-title">Lo que construí.</h2>
+    </div>
+    <button class="btn btn--ghost">Ver todo →</button>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let p of projects">
+      <div class="project-card__accent" [style.background]="p.color"></div>
+      <div class="project-card__header">
+        <div class="project-card__num">{{ p.num }}</div>
+        <div class="project-card__type">{{ p.type }}</div>
+      </div>
+      <div class="project-card__tags">
+        <span class="tag" *ngFor="let t of p.tags">{{ t }}</span>
+      </div>
+      <h3 class="project-card__title">{{ p.title }}</h3>
+      <p class="project-card__desc">{{ p.desc }}</p>
+      <div class="project-card__palette">
+        <span *ngFor="let c of p.palette" [style.background]="c" class="palette-dot"></span>
+      </div>
+      <a href="#" class="project-card__link">
+        Ver proyecto
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
+<section id="experience">
+  <div class="exp-left">
+    <p class="section-label">03. Experiencia</p>
+    <h2 class="section-title">Donde he<br>creado.</h2>
+  </div>
+
+  <div class="exp-timeline">
+    <div class="exp-item" *ngFor="let e of experience">
+      <div class="exp-item__date">{{ e.date }}</div>
+      <div class="exp-item__role">{{ e.role }}</div>
+      <div class="exp-item__company">{{ e.company }}</div>
+      <p class="exp-item__desc">{{ e.desc }}</p>
+      <div class="exp-item__stack">
+        <span *ngFor="let t of e.stack" class="exp-tag">{{ t }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CONTACT ═══════════════════ -->
+<section id="contact">
+  <div class="contact-deco" aria-hidden="true">
+    <div class="deco-ring deco-ring--1"></div>
+    <div class="deco-ring deco-ring--2"></div>
+    <div class="deco-ring deco-ring--3"></div>
+  </div>
+
+  <div class="contact-inner">
+    <p class="section-label">04. Contacto</p>
+    <h2 class="contact-title">¿Hacemos algo<br><em>bonito</em> juntos?</h2>
+    <p class="contact-sub">Siempre abierto a nuevos proyectos, colaboraciones y cafés virtuales.</p>
+
+    <div class="contact-links">
+      <a href="mailto:carlos.labrin15@gmail.com" class="btn btn--primary">Enviar correo</a>
+      <a href="https://github.com/Car-Lab312" class="btn btn--ghost">GitHub</a>
+      <a href="https://www.linkedin.com/in/carlos-patricio-labrín-cartagena" class="btn btn--ghost">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer>
+  <span>© 2026 Carlos Labrin</span>
+  <span>Diseñado y codificado con ❤️</span>
+  <span>v2.1.0</span>
+</footer>
