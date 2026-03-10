@@ -66,11 +66,11 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
     { icon: '🚀', name: 'Performance' },
   ];
 
-  counters: Counter[] = [
-    { label: 'Años exp.',   target: 5,  current: 0, suffix: '+' },
-    { label: 'Proyectos',   target: 30, current: 0, suffix: '+' },
-    { label: 'Lighthouse',  target: 98, current: 0, suffix: ''  },
-  ];
+  // counters: Counter[] = [
+  //   { label: 'Años exp.',   target: 5,  current: 0, suffix: '+' },
+  //   { label: 'Proyectos',   target: 30, current: 0, suffix: '+' },
+  //   { label: 'Lighthouse',  target: 98, current: 0, suffix: ''  },
+  // ];
 
   projects: Project[] = [
     {
@@ -164,7 +164,7 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     this.initCursor();
     this.initReveal();
-    this.initCounters();
+    // this.initCounters();
   }
 
   ngOnDestroy(): void {
@@ -263,34 +263,34 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
   // ══════════════════════════════════════════════════════════
   // COUNTERS (IntersectionObserver + setInterval)
   // ══════════════════════════════════════════════════════════
-  private initCounters(): void {
-    const counterEls = document.querySelectorAll<HTMLElement>('.counter__num');
+  // private initCounters(): void {
+  //   const counterEls = document.querySelectorAll<HTMLElement>('.counter__num');
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, idx) => {
-          if (!entry.isIntersecting) return;
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry, idx) => {
+  //         if (!entry.isIntersecting) return;
 
-          const counter = this.counters[idx];
-          if (!counter) return;
+  //         const counter = this.counters[idx];
+  //         if (!counter) return;
 
-          const inc = Math.ceil(counter.target / 40);
+  //         const inc = Math.ceil(counter.target / 40);
 
-          const interval = setInterval(() => {
-            counter.current = Math.min(counter.current + inc, counter.target);
-            if (counter.current >= counter.target) clearInterval(interval);
-          }, 40);
+  //         const interval = setInterval(() => {
+  //           counter.current = Math.min(counter.current + inc, counter.target);
+  //           if (counter.current >= counter.target) clearInterval(interval);
+  //         }, 40);
 
-          this.counterIntervals.push(interval);
-          observer.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.5 }
-    );
+  //         this.counterIntervals.push(interval);
+  //         observer.unobserve(entry.target);
+  //       });
+  //     },
+  //     { threshold: 0.5 }
+  //   );
 
-    counterEls.forEach(el => observer.observe(el));
-    this.intersectionObservers.push(observer);
-  }
+  //   counterEls.forEach(el => observer.observe(el));
+  //   this.intersectionObservers.push(observer);
+  // }
 
   // ══════════════════════════════════════════════════════════
   // SMOOTH SCROLL HELPER
