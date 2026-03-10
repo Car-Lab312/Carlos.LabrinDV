@@ -193,7 +193,7 @@ strong { color: $text; font-weight: 700; }
     box-shadow: 0 4px 24px rgba($accent, 0.3);
 
     &:hover {
-      background: lighten($accent, 8%);
+      // background: lighten($accent, 8%);
       box-shadow: 0 6px 32px rgba($accent, 0.5);
       transform: translateY(-2px);
     }
@@ -595,15 +595,15 @@ nav {
 // ═══════════════════════════════════════════════════════════
 // ABOUT
 // ═══════════════════════════════════════════════════════════
-#about {
-  @include section-pad;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+// #about {
+//   @include section-pad;
+//   // display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   gap: 80px;
+//   align-items: center;
 
-  @include tablet { grid-template-columns: 1fr; gap: 60px; }
-}
+//   @include tablet { grid-template-columns: 1fr; gap: 60px; }
+// }
 
 .about-text {
   color: $light;
@@ -788,7 +788,7 @@ nav {
     left: -24px;
     animation: floatCard2 5s ease-in-out infinite;
     border-color: rgba($accent3, 0.5);
-    color: lighten($accent3, 10%);
+    // color: lighten($accent3, 10%);
   }
   &--perf {
     bottom: 10px;
@@ -952,14 +952,14 @@ nav {
 // ═══════════════════════════════════════════════════════════
 // EXPERIENCE
 // ═══════════════════════════════════════════════════════════
-#experience {
-  @include section-pad;
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 80px;
+// #experience {
+//   @include section-pad;
+//   display: grid;
+//   grid-template-columns: 280px 1fr;
+//   gap: 80px;
 
-  @include tablet { grid-template-columns: 1fr; gap: 50px; }
-}
+//   @include tablet { grid-template-columns: 1fr; gap: 50px; }
+// }
 
 .exp-left {
   position: sticky;
@@ -1037,19 +1037,19 @@ nav {
   background: rgba($accent2, 0.1);
   border: 1px solid rgba($accent2, 0.25);
   border-radius: 20px;
-  color: lighten($accent2, 25%);
+  // color: lighten($accent2, 25%);
   text-transform: uppercase;
 }
 
 // ═══════════════════════════════════════════════════════════
 // CONTACT
 // ═══════════════════════════════════════════════════════════
-#contact {
-  @include section-pad;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
+// #contact {
+//   @include section-pad;
+//   text-align: center;
+//   position: relative;
+//   overflow: hidden;
+// }
 
 .contact-deco {
   position: absolute;

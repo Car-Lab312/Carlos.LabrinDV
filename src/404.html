@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirigiendo...</title>
+    <script>
+      var path = window.location.pathname.slice(1);
+      window.location.replace(
+        '/' + path.split('/')[0] + '/#/' + path.slice(path.indexOf('/') + 1)
+      );
+    </script>
+  </head>
+</html>
