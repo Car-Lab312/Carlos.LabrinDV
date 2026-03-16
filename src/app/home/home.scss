@@ -20,6 +20,8 @@ $font-body:    'Syne', sans-serif;
 $ease:      0.3s ease;
 $ease-slow: 0.6s ease;
 
+@use 'sass:color';
+
 // ═══════════════════════════════════════════════════════════
 // MIXINS
 // ═══════════════════════════════════════════════════════════
@@ -595,15 +597,14 @@ nav {
 // ═══════════════════════════════════════════════════════════
 // ABOUT
 // ═══════════════════════════════════════════════════════════
-// #about {
-//   @include section-pad;
-//   // display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   gap: 80px;
-//   align-items: center;
-
-//   @include tablet { grid-template-columns: 1fr; gap: 60px; }
-// }
+#about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  @include section-pad;
+  @include tablet { grid-template-columns: 1fr; gap: 60px; }
+}
 
 .about-text {
   color: $light;
@@ -788,7 +789,7 @@ nav {
     left: -24px;
     animation: floatCard2 5s ease-in-out infinite;
     border-color: rgba($accent3, 0.5);
-    // color: lighten($accent3, 10%);
+    color: color.scale($accent3, $lightness: 10%);
   }
   &--perf {
     bottom: 10px;
@@ -952,14 +953,14 @@ nav {
 // ═══════════════════════════════════════════════════════════
 // EXPERIENCE
 // ═══════════════════════════════════════════════════════════
-// #experience {
-//   @include section-pad;
-//   display: grid;
-//   grid-template-columns: 280px 1fr;
-//   gap: 80px;
-
-//   @include tablet { grid-template-columns: 1fr; gap: 50px; }
-// }
+#experience {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 80px;
+  
+  @include section-pad;
+  @include tablet { grid-template-columns: 1fr; gap: 50px; }
+}
 
 .exp-left {
   position: sticky;
@@ -1044,12 +1045,12 @@ nav {
 // ═══════════════════════════════════════════════════════════
 // CONTACT
 // ═══════════════════════════════════════════════════════════
-// #contact {
-//   @include section-pad;
-//   text-align: center;
-//   position: relative;
-//   overflow: hidden;
-// }
+#contact {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  @include section-pad;
+}
 
 .contact-deco {
   position: absolute;
