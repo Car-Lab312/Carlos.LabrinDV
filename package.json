@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production --base-href /Portafolio_developer/",
-    "deploy": "ng deploy --base-href=/Portafolio_developer/"
+    "build:prod": "ng build --configuration production --base-href /Carlos.LabrinDV/",
+    "deploy": "ng deploy --base-href=/Carlos.LabrinDV/"
   },
   "prettier": {
     "printWidth": 100,
