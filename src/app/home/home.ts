@@ -61,9 +61,9 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
     { icon: '🔷', name: 'TypeScript' },
     { icon: '🖌️', name: 'Figma' },
     { icon: '✨', name: 'Animations' },
-    { icon: '📐', name: 'UI / UX' },
-    { icon: '♿', name: 'A11y' },
-    { icon: '🚀', name: 'Performance' },
+    { icon: '📐', name: 'UI / UX' }
+    // { icon: '♿', name: 'A11y' },
+    // { icon: '🚀', name: 'Performance' },
   ];
 
   // counters: Counter[] = [
