@@ -96,8 +96,8 @@
     </div>
 
     <div class="hero-cta">
-      <!-- <button class="btn btn--primary" (click)="scrollTo('projects')">Ver proyectos</button> -->
-      <!-- <button class="btn btn--ghost" (click)="scrollTo('contact')">Contactar</button> -->
+      <button class="btn btn--primary" (click)="scrollTo('projects')">Ver proyectos</button>
+      <button class="btn btn--ghost" (click)="scrollTo('contact')">Contactar</button>
     </div>
   </div>
 
@@ -166,21 +166,21 @@
 </section>
 
 <!-- ═══════════════════ PROJECTS ═══════════════════ -->
-<!-- <section id="projects"> -->
-  <!-- <div class="projects-header">
+<section id="projects">
+  <div class="projects-header">
     <div>
       <p class="section-label">02. Proyectos</p>
       <h2 class="section-title">Lo que construí.</h2>
     </div>
-    <button class="btn btn--ghost">Ver todo →</button>
-  </div> -->
+    <!-- <button class="btn btn--ghost">Ver todo →</button> -->
+  </div>
 
-  <!-- <div class="projects-grid">
+  <div class="projects-grid">
     <div class="project-card" *ngFor="let p of projects">
       <div class="project-card__accent" [style.background]="p.color"></div>
       <div class="project-card__header">
         <div class="project-card__num">{{ p.num }}</div>
-        <div class="project-card__type">{{ p.type }}</div>
+        <!-- <div class="project-card__type">{{ p.type }}</div> -->
       </div>
       <div class="project-card__tags">
         <span class="tag" *ngFor="let t of p.tags">{{ t }}</span>
@@ -190,15 +190,15 @@
       <div class="project-card__palette">
         <span *ngFor="let c of p.palette" [style.background]="c" class="palette-dot"></span>
       </div>
-      <a href="#" class="project-card__link">
+      <a href="{{ p.url }}" target="_blank" class="project-card__link">
         Ver proyecto
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
       </a>
     </div>
-  </div> -->
-<!-- </section> -->
+  </div>
+</section>
 
 <!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
  

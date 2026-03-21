@@ -25,6 +25,7 @@ interface Project {
   desc: string;
   color: string;
   type: string;
+  url: string;
   palette: string[];
 }
 
@@ -75,58 +76,60 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
   projects: Project[] = [
     {
       num: '01',
-      tags: ['Angular', 'SCSS', 'Figma'],
-      title: 'Orion Design System',
-      desc: 'Sistema de diseño con +60 componentes accesibles, tematización dinámica y documentación interactiva.',
+      tags: ['Angular', 'SCSS'],
+      title: 'Agenda virtual',
+      desc: 'Sistema de gestión de agendas virtual, para uso institucional o personal.',
       color: 'linear-gradient(90deg, #ff6b6b, #ffd166)',
       type: 'Design System',
       palette: ['#ff6b6b', '#ffd166', '#fff5e6', '#1a1a2e'],
+      url: 'https://github.com/CarlosLabrin/Agenda-Virtual'
     },
     {
       num: '02',
-      tags: ['React', 'Framer Motion', 'Tailwind'],
-      title: 'Nova Landing Page',
-      desc: 'Landing de producto SaaS con animaciones 3D, scroll storytelling y conversión optimizada.',
+      tags: ['Angular', 'SCSS'],
+      title: 'voltix',
+      desc: 'Sistema para gestión para empresar de servicios de electricidad domiciliaria, con módulos para clientes, técnicos y administración.',
       color: 'linear-gradient(90deg, #9b5de5, #118ab2)',
       type: 'Landing Page',
       palette: ['#9b5de5', '#118ab2', '#c0a0ff', '#0f0f1a'],
-    },
-    {
-      num: '03',
-      tags: ['Next.js', 'GSAP', 'Three.js'],
-      title: 'Lumina Portfolio',
-      desc: 'Portfolio creativo con canvas WebGL, transiciones de página fluidas y modo oscuro/claro.',
-      color: 'linear-gradient(90deg, #06d6a0, #118ab2)',
-      type: 'Portfolio',
-      palette: ['#06d6a0', '#118ab2', '#e0fff8', '#0a1628'],
-    },
-    {
-      num: '04',
-      tags: ['Angular', 'D3.js', 'SCSS'],
-      title: 'Pulse Dashboard',
-      desc: 'Dashboard de analytics con gráficos interactivos, filtros en tiempo real y responsive design.',
-      color: 'linear-gradient(90deg, #ffd166, #ff6b6b)',
-      type: 'Dashboard',
-      palette: ['#ffd166', '#ff6b6b', '#fff3cd', '#1c1c28'],
-    },
-    {
-      num: '05',
-      tags: ['React', 'CSS Modules', 'Storybook'],
-      title: 'Echo UI Kit',
-      desc: 'Librería de componentes React con +40 elementos, Storybook y soporte de temas CSS variables.',
-      color: 'linear-gradient(90deg, #c77dff, #9b5de5)',
-      type: 'UI Library',
-      palette: ['#c77dff', '#9b5de5', '#f5e6ff', '#16101e'],
-    },
-    {
-      num: '06',
-      tags: ['Vue.js', 'CSS Animations', 'Vite'],
-      title: 'Bloom E-commerce',
-      desc: 'Tienda online con micro-interacciones, carrito animado, filtros fluidos y UX mobile-first.',
-      color: 'linear-gradient(90deg, #06d6a0, #9b5de5)',
-      type: 'E-commerce',
-      palette: ['#06d6a0', '#9b5de5', '#d4f5ed', '#0d1117'],
-    },
+      url: 'https://github.com/CarlosLabrin/voltix'
+    }
+    // {
+    //   num: '03',
+    //   tags: ['Next.js', 'GSAP', 'Three.js'],
+    //   title: 'Lumina Portfolio',
+    //   desc: 'Portfolio creativo con canvas WebGL, transiciones de página fluidas y modo oscuro/claro.',
+    //   color: 'linear-gradient(90deg, #06d6a0, #118ab2)',
+    //   type: 'Portfolio',
+    //   palette: ['#06d6a0', '#118ab2', '#e0fff8', '#0a1628'],
+    // },
+    // {
+    //   num: '04',
+    //   tags: ['Angular', 'D3.js', 'SCSS'],
+    //   title: 'Pulse Dashboard',
+    //   desc: 'Dashboard de analytics con gráficos interactivos, filtros en tiempo real y responsive design.',
+    //   color: 'linear-gradient(90deg, #ffd166, #ff6b6b)',
+    //   type: 'Dashboard',
+    //   palette: ['#ffd166', '#ff6b6b', '#fff3cd', '#1c1c28'],
+    // },
+    // {
+    //   num: '05',
+    //   tags: ['React', 'CSS Modules', 'Storybook'],
+    //   title: 'Echo UI Kit',
+    //   desc: 'Librería de componentes React con +40 elementos, Storybook y soporte de temas CSS variables.',
+    //   color: 'linear-gradient(90deg, #c77dff, #9b5de5)',
+    //   type: 'UI Library',
+    //   palette: ['#c77dff', '#9b5de5', '#f5e6ff', '#16101e'],
+    // },
+    // {
+    //   num: '06',
+    //   tags: ['Vue.js', 'CSS Animations', 'Vite'],
+    //   title: 'Bloom E-commerce',
+    //   desc: 'Tienda online con micro-interacciones, carrito animado, filtros fluidos y UX mobile-first.',
+    //   color: 'linear-gradient(90deg, #06d6a0, #9b5de5)',
+    //   type: 'E-commerce',
+    //   palette: ['#06d6a0', '#9b5de5', '#d4f5ed', '#0d1117'],
+    // },
   ];
 
   experience: Experience[] = [
