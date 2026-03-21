@@ -82,7 +82,7 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
       color: 'linear-gradient(90deg, #ff6b6b, #ffd166)',
       type: 'Design System',
       palette: ['#ff6b6b', '#ffd166', '#fff5e6', '#1a1a2e'],
-      url: 'https://github.com/CarlosLabrin/Agenda-Virtual'
+      url: 'https://car-lab312.github.io/Organizador_de_agenda/auth/login'
     },
     {
       num: '02',
