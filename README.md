@@ -34,7 +34,7 @@ To build the project run:
 ng build
 ```
 
-Cada ver que se realize un cambio en la paguina, se debe eliminar la carpeta actual dist y crear una nuevo con el comando:
+Cada ver que se realize un cambio en la paguina, se debe eliminar la carpeta actual dist y crear una nueva con el comando:
 ```bash
 ng deploy --base-href "/Carlos.LabrinDV/"
 ```
